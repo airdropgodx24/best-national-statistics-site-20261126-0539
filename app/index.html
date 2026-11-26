@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StatAtlas — National Statistics Explorer</title>
+<meta name="description" content="StatAtlas: national statistics for eight countries — population, economy, health, education and connectivity, every figure with its source and year.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-head">
+  <div class="wrap head-in">
+    <a class="brand" href="#/">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect x="2" y="18" width="6" height="12" rx="1.5" fill="#e8a33d"/><rect x="13" y="10" width="6" height="20" rx="1.5" fill="#0e7c86"/><rect x="24" y="4" width="6" height="26" rx="1.5" fill="#123a5c"/></svg>
+      <span class="brand-name">StatAtlas</span>
+      <span class="brand-tag">National Statistics Explorer</span>
+    </a>
+    <label class="country-pick">Country
+      <select id="country-select" data-action="country">
+        <option value="NG">Nigeria</option>
+        <option value="US">United States</option>
+        <option value="GB">United Kingdom</option>
+        <option value="IN">India</option>
+        <option value="JP">Japan</option>
+        <option value="BR">Brazil</option>
+        <option value="DE">Germany</option>
+        <option value="ZA">South Africa</option>
+      </select>
+    </label>
+  </div>
+  <nav class="wrap nav" aria-label="Sections">
+    <a class="navlink" href="#/">Overview</a>
+    <a class="navlink" href="#/population">Population</a>
+    <a class="navlink" href="#/economy">Economy</a>
+    <a class="navlink" href="#/health-education">Health &amp; Education</a>
+    <a class="navlink" href="#/compare">Compare</a>
+    <a class="navlink" href="#/data">Data &amp; Sources</a>
+  </nav>
+</header>
+<main class="wrap" id="view"></main>
+<footer class="site-foot">
+  <div class="wrap">
+    <p><strong>StatAtlas</strong> — a national statistics explorer built from published figures. Sources: World Bank World Development Indicators, UN World Population Prospects, UNESCO UIS, WHO Global Health Expenditure Database, UN IGME and national statistics offices. Each figure shows its source and year beside it.</p>
+    <p class="foot-note">Figures are the latest published values held in this site's own data file; nothing on this page is fetched from the network.</p>
+  </div>
+</footer>
+<script src="data.js"></script>
+<script src="charts.js"></script>
+<script src="views.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
