@@ -21,8 +21,10 @@ if (existsSync(join(here, 'screenshots'))) {
   cpSync(join(here, 'screenshots'), join(out, 'screenshots'), { recursive: true });
 }
 
-// The scorer's own caps: dossier text capped at 160 KiB, at most 4 screenshots
-// of at most 256 KiB each, app/ at most 993 entries and 16 MiB in all.
+// The scorer's own caps, passed so this program refuses nothing the scorer
+// would take and takes nothing it would refuse: the dossier text is capped at
+// 160 KiB, screenshots at 4 files of at most 256 KiB each, and app/ at most
+// 993 files and directories and 16 MiB in all.
 writeFileSync(
   join(out, 'dossier.json'),
   buildDossier(out, {
